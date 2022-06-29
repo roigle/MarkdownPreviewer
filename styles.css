@@ -1,0 +1,95 @@
+:root {
+  --blueColor: #460AA1;
+  --fontEditor: 'Share Tech Mono', monospace;
+  --fontPreview: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: lightgray;
+}
+
+#title {
+  text-align: center;
+}
+
+#title-h1 {
+  font-family: var(--fontEditor);
+}
+
+#title-p {
+  font-family: var(--fontPreview);
+}
+
+#wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+/* Make the columns display on top of each other on small screens */
+@media (max-width: 800px) {
+  #wrapper {
+    flex-direction: column;
+  }
+}
+
+#editor-div {
+  border: 3px solid green;
+  color: green;
+  background-color: black;
+  flex: 1 1 0px;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  font-family: var(--fontEditor);
+}
+
+textarea:focus {
+    outline: none;
+}
+
+#preview-div {
+  position: relative;
+  border: 3px solid var(--blueColor);
+  color: var(--blueColor);
+  flex: 1 1 0px;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  font-family: var(--fontPreview);
+  background-color: white;
+}
+
+#editor {
+  width: 95%;
+  height: 600px;
+  resize: none;
+  font-family: var(--fontEditor);
+  background-color: black;
+  color: green;
+  padding: 15px 10px 10px 10px;
+  border: none;
+}
+
+#preview {
+  padding: 10px 10px 10px 10px;
+}
+
+.section-titles {
+  font-size: 1.5em;
+  text-align: left;
+  padding: 10px 10px 10px 10px;
+}
+
+#editor-title {
+  border-bottom: 4px solid green;
+}
+
+#preview-title {
+  border-bottom: 4px solid var(--blueColor);
+}
+
+blockquote {
+  border-left: 3px solid var(--blueColor);
+  padding-left: 10px;
+}
